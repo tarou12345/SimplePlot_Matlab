@@ -35,7 +35,7 @@ classdef SimpleMesh
             % viewのデフォルト設定
             % mesh作成
             mesh(obj.X1, obj.X2, obj.Z)
-            [obj.view_x1, obj.view_x2] = view
+            [obj.view_x1, obj.view_x2] = view;
         end
         
        %% Get関係
