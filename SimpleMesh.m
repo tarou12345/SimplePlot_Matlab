@@ -130,6 +130,8 @@ classdef SimpleMesh
             end
         end
         
+        
+        
         function viewRotateX2(obj, rotateNum)
             for i=1:rotateNum
                 pause(0.01)
