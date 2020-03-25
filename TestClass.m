@@ -16,6 +16,8 @@ classdef TestClass
         
         function outputArg = getX(obj)
             outputArg = obj.x;
+            
+            
         end
         
         function plot(obj)
