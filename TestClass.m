@@ -14,6 +14,10 @@ classdef TestClass
             obj.y = y;
         end
         
+        function outputArg = getX(obj)
+            outputArg = obj.x;
+        end
+        
         function plot(obj)
             figure
             plot(obj.x, obj.y);
