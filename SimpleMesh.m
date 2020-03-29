@@ -41,8 +41,8 @@ classdef SimpleMesh
             [obj.view_x1, obj.view_x2] = view;
         end
         
-       %% Getä÷åW
-        function outputArg = getX1(obj)
+        %% Getä÷åW
+        function outputArg = getX1(obj)        
             outputArg = obj.X1;
         end
 
@@ -111,7 +111,7 @@ classdef SimpleMesh
         end
         
         % âÒì]ìÆçÏÇÃÉfÉÇ
-        function viewRotate(obj, rotateNum)
+        function rotate(obj, rotateNum)
             for i=1:rotateNum
                 pause(0.01)
                 [obj.view_x1, obj.view_x2] = view;
@@ -121,7 +121,7 @@ classdef SimpleMesh
             end
         end
         
-        function viewRotateX1(obj, rotateNum)
+        function rotateX1(obj, rotateNum)
             for i=1:rotateNum
                 pause(0.01)
                 [obj.view_x1, obj.view_x2] = view;
@@ -130,9 +130,7 @@ classdef SimpleMesh
             end
         end
         
-        
-        
-        function viewRotateX2(obj, rotateNum)
+        function rotateX2(obj, rotateNum)
             for i=1:rotateNum
                 pause(0.01)
                 [obj.view_x1, obj.view_x2] = view;
@@ -153,14 +151,14 @@ classdef SimpleMesh
         end
         
        %% ï\ñ Ç…ê¸Çï`Ç≠
-       function lineOnSurface(obj)
-           x1_line = linspace(-1 ,1 ,20);
-           x2_line = linspace(0, 10, 20);
-           z_line = cos(x1_line).*x2_line;
+        function lineOnSurface(obj)
+            x1_line = linspace(-1 ,1 ,20);
+            x2_line = linspace(0, 10, 20);
+            z_line = cos(x1_line).*x2_line;
            
-           hold on
-           plot3(x1_line, x2_line, z_line, 'm', 'LineWidth', 2)
-       end
+            hold on
+            plot3(x1_line, x2_line, z_line, 'm', 'LineWidth', 2)
+        end
        
     end
 end
