@@ -1,8 +1,6 @@
-classdef TestClass
-    %TESTCLASS このクラスの概要をここに記述
-    %   詳細説明をここに記述
+classdef TestClass < handle
     
-    properties
+    properties 
         x
         y
     end
@@ -14,15 +12,29 @@ classdef TestClass
             obj.y = y;
         end
         
-        function outputArg = getX(obj)
-            outputArg = obj.x;
-            
-            
+        %% メソッド
+        function obj = test(obj,x)
+            obj.plusX(x);
         end
         
-        function plot(obj)
-            figure
-            plot(obj.x, obj.y);
+        %% 新しいインスタンスを作る実験
+        function result = test2(obj,x)
+            obj.plusX(x);
+            result = obj;
+        end
+        
+        
+        %%
+        function x = get.x(obj)
+            x = obj.x;
+        end
+        
+        function set.x(obj, x)
+            obj.x = x;
+        end
+        
+        function plusX(obj, x)
+            obj.x = obj.x + x;
         end
     end
 end
